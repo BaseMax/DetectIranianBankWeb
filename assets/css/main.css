@@ -25,15 +25,56 @@
     box-sizing: border-box;
 }
 
+input:focus{
+    outline: none;
+}
+
 html, body{
+    padding: 0;
+    margin: 0;
     overflow-x: hidden;
     font-family: 'vazir', sans-serif;
 }
 
 body{
     background-color: #f3f3f3;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.box__main{
+    background-color: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px #f5f5f5;
+}
+.box__title{
+    margin-top: 0;
+}
+.box__input{
+    padding: 1rem 2rem;
+    direction: ltr;
+}
+.box__input input{
+    width: 80px;
+    font-size: 1.3rem;
+    padding: 0.75rem 1rem;
+    margin: 0.4rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0f0f0;
+}
+.box-detectedbank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-detectedbank p{
+    margin: 0;
+}
+.box-detectedbank img{
+    margin-left: 0.5rem;
 }
