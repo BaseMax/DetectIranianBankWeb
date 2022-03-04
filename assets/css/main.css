@@ -59,9 +59,14 @@ body{
 }
 .box-detectedbank{
     display: flex;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
     padding-top: 0.5rem;
+}
+.box-detectedbank.active{
+    visibility: visible;
+    transition: all 300ms;
 }
 .box-detectedbank p{
     margin: 0;
