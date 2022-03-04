@@ -1,21 +1,10 @@
 @font-face {
     font-family: 'vazir';
-    font-weight: bold;
-    src: url('../font/Vazir-Bold-FD.eot');
-    src: url('../font/Vazir-Bold-FD.eot?#iefix') format('embedded-opentype'),
-         url('../font/Vazir-Bold-FD.svg#Vazir-Bold-FD') format('svg'),
-         url('../font/Vazir-Bold-FD.woff') format('woff'),
-         url('../font/Vazir-Bold-FD.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'vazir';
-    font-weight: 500;
-    src: url('../font/Vazir-Regular-FD.eot');
-    src: url('../font/Vazir-Regular-FD.eot?#iefix') format('embedded-opentype'),
-         url('../font/Vazir-Regular-FD.svg#Vazir-Regular-FD') format('svg'),
-         url('../font/Vazir-Regular-FD.woff') format('woff'),
-         url('../font/Vazir-Regular-FD.woff2') format('woff2');
+    src: url('../fonts/Vazir-Regular-FD.eot');
+    src: url('../fonts/Vazir-Regular-FD.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir-Regular-FD.svg#Vazir-Regular-FD') format('svg'),
+         url('../fonts/Vazir-Regular-FD.woff') format('woff'),
+         url('../fonts/Vazir-Regular-FD.woff2') format('woff2');
 }
 
 
@@ -66,6 +55,7 @@ body{
     border-radius: 10px;
     border: none;
     background-color: #f0f0f0;
+    transition: all 300ms;
 }
 .box-detectedbank{
     display: flex;

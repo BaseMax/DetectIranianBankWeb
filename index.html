@@ -16,18 +16,19 @@
                 شماره کارت خود را وارد کنید
             </p>
             <div class="box__input">
-                <input type="text" maxlength="4" id="txtNum1">
-                <input type="text" maxlength="4" id="txtNum2">
-                <input type="text" maxlength="4" id="txtNum3">
-                <input type="text" maxlength="4" id="txtNum4">
+                <input type="text" maxlength="4" id="txtNumBank1">
+                <input type="text" maxlength="4" id="txtNumBank2">
+                <input type="text" maxlength="4" id="txtNumBank3">
+                <input type="text" maxlength="4" id="txtNumBank4">
             </div>
             <div class="box-detectedbank">
-                <img src="images/karafarin-06.svg" width="25" height="25" alt="karafarin-bank-logo">
-                <p>بانک کارآفرین</p>
+                <img class="detectedbank__logo" src="images/karafarin-06.svg" width="25" height="25" alt="karafarin-bank-logo">
+                <p class="detectedbank__name">بانک کارآفرین</p>
             </div>
         </div>
     </main>
 
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="detect-bank.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

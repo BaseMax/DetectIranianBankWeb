@@ -6,7 +6,7 @@
  * @Repository: https://github.com/BaseMax/DetectIranianBankJS
  */
 
-const banks = [{
+export const banks = [{
     "card_no": 627381,
     "bank_name": "ansar",
     "bank_title": "بانک انصار",
@@ -240,5 +240,5 @@ const detect_bank = (card_number) => {
     return undefined;
 };
 
-console.log(detect_bank("63934610"));
-console.log(detect_bank("111163934610"));
+// console.log(detect_bank("63934610"));
+// console.log(detect_bank("111163934610"));
