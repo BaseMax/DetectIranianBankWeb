@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'vazir';
+    font-weight: bold;
+    src: url('../font/Vazir-Bold-FD.eot');
+    src: url('../font/Vazir-Bold-FD.eot?#iefix') format('embedded-opentype'),
+         url('../font/Vazir-Bold-FD.svg#Vazir-Bold-FD') format('svg'),
+         url('../font/Vazir-Bold-FD.woff') format('woff'),
+         url('../font/Vazir-Bold-FD.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'vazir';
+    font-weight: 500;
+    src: url('../font/Vazir-Regular-FD.eot');
+    src: url('../font/Vazir-Regular-FD.eot?#iefix') format('embedded-opentype'),
+         url('../font/Vazir-Regular-FD.svg#Vazir-Regular-FD') format('svg'),
+         url('../font/Vazir-Regular-FD.woff') format('woff'),
+         url('../font/Vazir-Regular-FD.woff2') format('woff2');
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    font-family: 'vazir', sans-serif;
+}
+
+body{
+    background-color: #f3f3f3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
