@@ -43,9 +43,11 @@ const DetectInput = (event, index) => {
 }
 
 const BackspaceInput = (event, index) => {
-    console.log(storedSelectedInput);
     if(event.keyCode == 8){
         if(index === 0){
+            if(detectedbank_box.classList.contains('active')){
+                detectedbank_box.classList.remove('active');
+            }
             return false;
         }
         if(storedSelectedInput === undefined || storedSelectedInput.length < 1){
@@ -76,8 +78,11 @@ const DetectCreditCard = (value) => {
         if(selectBank.length){
             console.log(selectBank);
             detectbank_logo.src = selectBank[0].bank_logo;
+            detectbank_logo.alt = selectBank[0].bank_name;
             detectbank_name.innerHTML = selectBank[0].bank_title;
-            detectedbank_box.classList.add('active');
+            if(detectedbank_box.classList.contains('active') === false){
+                detectedbank_box.classList.add('active');
+            }
         }
     }
 }
