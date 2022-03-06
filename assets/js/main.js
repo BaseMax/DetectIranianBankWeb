@@ -2,8 +2,11 @@ import { banks } from '../../detect-bank.js';
 
 const txtCredits = document.querySelectorAll('.box__input input');
 const detectedbank_box = document.querySelector('.box-detectedbank');
+
 let firstNumCredit = undefined;
+let storedSelectedInput = undefined;
 let checkNumber = false;
+
 const persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g];
 const arabicNumbers  = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g];
 
@@ -20,11 +23,13 @@ const ReplaceDigitNumbers = (value) => {
 const DetectInput = (event, index) => {
     event.target.value = ReplaceDigitNumbers(event.target.value);
     if(checkNumber){
+        storedSelectedInput = event.target.value;
         if(index === 3){
             return false;
         }
         let valueOfInput = event.target.value;
         if(valueOfInput.length >= 4) {
+            storedSelectedInput = undefined;
             event.target.value = valueOfInput.substr(-4);
             txtCredits[index + 1].focus();
             if(index === 0){
@@ -33,6 +38,20 @@ const DetectInput = (event, index) => {
             if(index === 1){
                 DetectCreditCard(event.target.value);
             }
+        }
+    }
+}
+
+const BackspaceInput = (event, index) => {
+    console.log(storedSelectedInput);
+    if(event.keyCode == 8){
+        if(index === 0){
+            console.log('break')
+            return false;
+        }
+        if(storedSelectedInput === undefined || storedSelectedInput.length < 1){
+            console.log('back')
+            txtCredits[index - 1].focus();
         }
     }
 }
@@ -64,12 +83,10 @@ const DetectCreditCard = (value) => {
     }
 }
 
-
-window.addEventListener('load', ReplaceDigitNumbers);
-
 if(txtCredits){
     txtCredits.forEach((txtCredit, index) => {
         txtCredit.addEventListener('keypress', (e) => NumberValidation(e));
         txtCredit.addEventListener('input', (e) => DetectInput(e, index));
+        txtCredit.addEventListener('keydown', (e) => BackspaceInput(e, index));
     });
 }

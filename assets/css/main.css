@@ -74,3 +74,16 @@ body{
 .box-detectedbank img{
     margin-left: 0.5rem;
 }
+
+
+@media screen and (max-width: 556px) {
+    .box__main{
+        padding: 2rem 1rem;
+    }
+    .box__input{
+        padding: 1rem 0.5rem;
+    }
+    .box__input input{
+        margin: 0.4rem 0.2rem;
+    }
+}
