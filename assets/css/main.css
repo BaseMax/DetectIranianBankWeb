@@ -50,7 +50,7 @@ body{
 }
 .box__body{
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 2.3rem;
 }
 .box__input{
     padding: 1rem 2rem;
@@ -87,7 +87,7 @@ body{
 
 .horizontal-line{
     opacity: 1 ;
-    margin: 0 0 1.5rem;
+    margin: 0;
     border: 1px solid #f3f3f3;
 }
 
