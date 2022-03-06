@@ -28,7 +28,7 @@ const DetectInput = (event, index) => {
             return false;
         }
         let valueOfInput = event.target.value;
-        if(valueOfInput.length >= 4) {
+        if(valueOfInput.length >= 4 ) {
             storedSelectedInput = undefined;
             event.target.value = valueOfInput.substr(-4);
             txtCredits[index + 1].focus();
@@ -46,11 +46,9 @@ const BackspaceInput = (event, index) => {
     console.log(storedSelectedInput);
     if(event.keyCode == 8){
         if(index === 0){
-            console.log('break')
             return false;
         }
         if(storedSelectedInput === undefined || storedSelectedInput.length < 1){
-            console.log('back')
             txtCredits[index - 1].focus();
         }
     }
@@ -75,7 +73,8 @@ const DetectCreditCard = (value) => {
 
         selectBank = banks.filter(item => item.card_no == firstNumCredit);
 
-        if(selectBank){
+        if(selectBank.length){
+            console.log(selectBank);
             detectbank_logo.src = selectBank[0].bank_logo;
             detectbank_name.innerHTML = selectBank[0].bank_title;
             detectedbank_box.classList.add('active');
