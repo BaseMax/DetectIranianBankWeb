@@ -26,12 +26,17 @@ html, body{
 }
 
 body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
     background-image: url('../../images/background.png');
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .box__main{
@@ -89,6 +94,16 @@ body{
     opacity: 1 ;
     margin: 0;
     border: 1px solid #f3f3f3;
+}
+
+footer{
+    background-color: #ffffff;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: 800;
 }
 
 
