@@ -33,7 +33,7 @@ body{
 
 main{
     background-image: url('../../images/background.png');
-    height: 100vh;
+    height: calc(100vh - 58px);
     display: flex;
     justify-content: center;
     align-items: center;
