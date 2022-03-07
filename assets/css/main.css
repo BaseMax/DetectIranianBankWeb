@@ -26,7 +26,7 @@ html, body{
 }
 
 body{
-    background: url('../../images/background-pattern.svg');
+    background-image: url('../../images/background.png');
     height: 100vh;
     display: flex;
     flex-direction: column;
