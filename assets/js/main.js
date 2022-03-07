@@ -35,7 +35,7 @@ const DetectInput = (event, index) => {
             if(index === 0){
                 firstNumCredit = valueOfInput;
             }
-            if(index === 1){
+            if(index === 1 && event.target.value.length >= 4){
                 DetectCreditCard(event.target.value);
             }
         }
@@ -79,7 +79,6 @@ const DetectCreditCard = (value) => {
         selectBank = banks.filter(item => item.card_no == firstNumCredit);
 
         if(selectBank.length){
-            console.log(selectBank);
             detectbank_logo.src = selectBank[0].bank_logo;
             detectbank_logo.alt = selectBank[0].bank_name;
             detectbank_name.innerHTML = selectBank[0].bank_title;
