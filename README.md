@@ -1,5 +1,7 @@
 # Detect Iranian Bank Web
 
+A website for detecting name of bank from card number, supported all **Iranian banks**.
+
 [![Detect Iranian Bank Web](demo.jpg)](https://basemax.github.io/DetectIranianBankWeb/)
 
 یک سایت که یک یا چند فیلد برای وارد کردن کد بانکی داره و کد بانکی رو شناسایی می کند که از چه بانک و مشخصاتی است.
