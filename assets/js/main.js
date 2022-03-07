@@ -42,7 +42,10 @@ const DetectInput = (event, index) => {
     }
 }
 
-const BackspaceInput = (event, index) => {
+const KeyDoenInput = (event, index) => {
+    if(event.keyCode == 9){
+        event.preventDefault();
+    }
     if(event.keyCode == 8){
         if(index === 0){
             if(detectedbank_box.classList.contains('active')){
@@ -91,6 +94,6 @@ if(txtCredits){
     txtCredits.forEach((txtCredit, index) => {
         txtCredit.addEventListener('keypress', (e) => NumberValidation(e));
         txtCredit.addEventListener('input', (e) => DetectInput(e, index));
-        txtCredit.addEventListener('keydown', (e) => BackspaceInput(e, index));
+        txtCredit.addEventListener('keydown', (e) => KeyDoenInput(e, index));
     });
 }
