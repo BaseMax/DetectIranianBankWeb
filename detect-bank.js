@@ -223,22 +223,3 @@ export const banks = [{
     "bank_logo": "https://basemax.github.io/DetectIranianBankWeb/images/tosetaavon-19.svg",
     "color": "#290076ff"
 }];
-
-const detect_bank = (card_number) => {
-    const onlyNum = str => str.replace(/[^.\d]/g, '');
-    card_number = onlyNum(String(card_number));
-
-    if (card_number.length < 6)
-        return undefined;
-
-    card_number_prefix = card_number.substr(0, 6);
-    // TODO: use .filter() JS
-    for (const bank of banks) {
-        if (card_number_prefix == bank.card_no)
-            return bank;
-    }
-    return undefined;
-};
-
-// console.log(detect_bank("63934610"));
-// console.log(detect_bank("111163934610"));
