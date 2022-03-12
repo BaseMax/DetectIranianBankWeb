@@ -117,11 +117,17 @@ footer a{
     .box__input input{
         margin: 0.4rem 0;
     }
+    .box-detectedbank{
+      padding-bottom: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 370px) {
     .box__input input{
         width: 70px;
         padding: 0.5rem;
+    }
+    .box-detectedbank{
+      padding-bottom: 1.5rem;
     }
 }
